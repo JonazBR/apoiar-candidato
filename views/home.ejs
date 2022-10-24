@@ -112,6 +112,8 @@ body {
     width: 90%;
 }
 .modelos {
+    width: 280px;
+    height: 280px;
     padding: 5px;
     border-color: rgba(26, 26, 26, 0.507);
     border-radius: 5px;
@@ -122,6 +124,40 @@ body {
     border-width: 2px;
 
 }
+
+/* CSS */
+#edit {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#edit:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  #edit {
+    padding: 0 2.6rem;
+  }
+}
+
 </style>
 
 </head>
@@ -138,8 +174,8 @@ body {
         </div>
     </section>
    
-        <img onclick='escolher("bolsonaro", 1)' class="modelos" width="320" height="320" src="https://i.ibb.co/QJSfdsw/1.png" alt="" srcset="">
-        <img onclick='escolher("lula", 1)'     class="modelos" width="320" height="320" src="https://i.ibb.co/wJFgVj8/1.jpg" alt="" srcset="">
+        <img onclick='escolher("bolsonaro", 1)' class="modelos" src="https://i.ibb.co/QJSfdsw/1.png" alt="" srcset="">
+        <img onclick='escolher("lula", 1)'     class="modelos"  src="https://i.ibb.co/wJFgVj8/1.jpg" alt="" srcset="">
 
 
 

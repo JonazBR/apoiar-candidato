@@ -21,7 +21,8 @@ window.addEventListener("load", () => {
 const escolher = (partido, modelo) => {
     localStorage.setItem("escolha", JSON.stringify({
         partido,
-        modelo
+        modelo,
+        image: images[partido][modelo]
     }))
     intro.src = images[partido][modelo]
 
