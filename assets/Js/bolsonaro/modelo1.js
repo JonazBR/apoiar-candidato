@@ -2,8 +2,8 @@ const canvas = require('canvas')
 
 module.exports = modelo1 = async (name) => {
     return new Promise(async(resolve) => {
-        await canvas.registerFont("../Fonts/bolsonaro/edosz.ttf", { family: "Edo SZ" })
-        const template = await canvas.loadImage("../Images/bolsonaro/1.png")
+        await canvas.registerFont("./assets/Fonts/bolsonaro/edosz.ttf", { family: "Edo SZ" })
+        const template = await canvas.loadImage("./assets/Images/bolsonaro/1.png")
         
         const image = canvas.createCanvas(template.width, template.height)
         const ctx =  image.getContext('2d')
