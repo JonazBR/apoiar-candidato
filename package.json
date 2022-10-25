@@ -2,7 +2,7 @@
   "name": "politica",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "pm2-runtime start server.js --cron 0 0 */3 * * *"
   },
