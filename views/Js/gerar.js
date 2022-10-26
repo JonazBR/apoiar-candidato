@@ -15,9 +15,11 @@ document.getElementById("gerar").addEventListener("click", async () => {
     document.getElementById("imagem").src = imageBase64
     document.getElementById("download").href = imageBase64
     document.getElementById("download").download = nome + ".jpg"
+})
 
-
-
-
+document.getElementById("download").addEventListener("click", async () => {
+    const a_dl = document.getElementById("download")
+    if(a_dl.href == undefined) return alert(`Por favor, clique no botão "gerar imagem" antes`)
 
 })
+

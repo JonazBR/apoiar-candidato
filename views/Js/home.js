@@ -2,12 +2,15 @@ const intro = document.getElementById("intro_img")
 
 let images = {
     lula: {
-        1: "https://i.ibb.co/wJFgVj8/1.jpg"
+        1: "https://i.ibb.co/wJFgVj8/1.jpg",
+        2: "https://i.ibb.co/VT2dSPm/2.png"
     },
     bolsonaro: {
-        1: "https://i.ibb.co/QJSfdsw/1.png"
+        1: "https://i.ibb.co/QJSfdsw/1.png",
+        2: "https://i.ibb.co/ZmkjPFq/2.png"
     }
 }
+let a = 
 
 window.addEventListener("load", () => {
     let escolha  = JSON.parse(localStorage.getItem("escolha"))
