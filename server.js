@@ -15,7 +15,7 @@ app.get("/gerar", (req,res) => {
     res.render("gerar")
 })
 
-app.get("/generate/:partido", async(req, res) => {
+app.get("/gen/:partido", async(req, res) => {
     const partido = req.params.partido
     const nome = req.query.nome
     const modelo = req.query.modelo
