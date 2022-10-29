@@ -29,7 +29,7 @@ app.get("/gen/:partido", async(req, res) => {
     }
 
     console.log(`[+] acess from ${IP}`)
-    if(blockIp.includes(IP)) return res.status(403)
+    if(IP == "35.224.35.49") return 
 
 
 
