@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 document.getElementById("gerar").addEventListener("click", async () => {
     const nome = document.getElementById("name").value
     if (!nome) return alert("Escreva um nome antes")
-    const data = await fetch(`/generate/${escolha.partido}?nome=${nome}&modelo=${escolha.modelo}`)
+    const data = await fetch(`/gen/${escolha.partido}?nome=${nome}&modelo=${escolha.modelo}`)
     const imageBase64 = await data.text()
     document.getElementById("imagem").src = imageBase64
     document.getElementById("download").href = imageBase64
