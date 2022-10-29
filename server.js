@@ -19,6 +19,7 @@ app.get("/generate/:partido", async(req, res) => {
     const partido = req.params.partido
     const nome = req.query.nome
     const modelo = req.query.modelo
+    if(nome.length > 20) return res.status(403)
 
     gerar({
         modelo,
