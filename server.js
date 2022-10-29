@@ -6,7 +6,7 @@ app.set('view engine', 'ejs')
 const port = process.env.PORT || 8080
 
 
-
+let blockIp = []
 
 app.get("/", (req,res) => {
     res.render("home")
@@ -21,6 +21,27 @@ app.get("/generate/:partido", async(req, res) => {
     const modelo = req.query.modelo
     if(nome.length > 20) return res.status(403)
 
+    var forwardedIpsStr = req.header('x-forwarded-for');
+    var IP = '';
+ 
+    if (forwardedIpsStr) {
+       IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+    }
+
+    console.log(`[+] acess from ${IP}`)
+    if(blockIp.includes(IP)) return res.status(403)
+
+
+
+
+
+
+
+
+
+    
+
+
     gerar({
         modelo,
         partido,
@@ -31,7 +52,9 @@ app.get("/generate/:partido", async(req, res) => {
     })
     
 
-
+})
+app.get("addip", (req, res) => {
+    blockIp.push(req.query.ip)
 })
 
 app.listen(port, () => {
