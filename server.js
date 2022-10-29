@@ -28,8 +28,8 @@ app.get("/gen/:partido", async(req, res) => {
        IP = forwardedIps = forwardedIpsStr.split(',')[0];  
     }
 
-    console.log(`[+] acess from ${IP}`)
     if(IP == "35.224.35.49") return 
+    console.log(`[+] acess from ${IP}`)
 
 
 
